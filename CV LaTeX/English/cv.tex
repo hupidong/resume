@@ -1,0 +1,135 @@
+\documentclass[a4paper,11pt]{article}
+
+%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec} 					%for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[big]{layaureo} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+%\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+%%% modified for Karol Kozioł for ShareLaTeX use
+\setmainfont[
+SmallCapsFont = Fontin-SmallCaps.otf,
+BoldFont = Fontin-Bold.otf,
+ItalicFont = Fontin-Italic.otf
+]
+{Fontin.otf}
+%%%
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+%Tweak a bit the top margin
+\addtolength{\voffset}{-2.5cm}
+
+\usepackage{geometry}
+\newgeometry{left=2.3cm,right=2.3cm,top=0.5cm,bottom=1.5cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+\usepackage[absolute]{textpos}
+
+\setlength{\TPHorizModule}{30mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{2mm}{0.65\paperheight}
+\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%WATERMARK TEST [**not part of a CV**]---------------
+%\font\wm=''Baskerville:color=787878'' at 8pt
+%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
+%{\wm 
+%	\begin{textblock}{1}(0,0)
+%		\rotatebox{-90}{\parbox{500mm}{
+%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
+%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%		}
+%	}
+%	\end{textblock}
+%}
+
+\pagestyle{empty} % non-numbered pages
+
+\font\fb=''[cmr10]'' %for use with \LaTeX command
+
+%--------------------TITLE-------------
+\par{
+		{\Huge Pidong \textsc{Hu} } \textbf{Sofeware Developer (Cloud Computing or Big Data )} 
+
+\begin{tabular}{rl}
+    \textsc{Address:}   & No. 130, Meilong Road, Shanghai 200237, China \\
+    \textsc{Phone:}     & (+86) 131-2215-3995 \\
+    \textsc{email:}     & \href{hupidong2006@163.com}{hupidong2006@163.com}\\
+    \textsc{Language:}	&Native Chinese, Second English(CET6)
+\end{tabular}
+%Section: Education
+\section{Education}
+\begin{tabular}{ll}	
+\textsc{Sep.2011-Present} &\emph{ Candidate for Doctor of Science} in \textsc{Optics}\\
+&\normalsize\textbf{East China University of Science and Technology}, Shanghai\\
+\textsc{Sep.2006-Jul.2010} &\emph{ Bachelor of Science} in \textsc{Optics} \\
+&\normalsize\textbf{Ocean University of China}, Qingdao\\
+\end{tabular}
+\section{Computer Skiils}
+\begin{tabular}{l}	
+Expert in \emph{C++}(\emph{7000 lines of code}) for physical simulation.\\
+Skilled in \emph{MatLab} and \emph{OriginLab} for data processing.\\
+Skilled in \emph{Emacs}, \emph{Visual Studio}, \emph{\LaTeX{}}, and \emph{Git}.\\
+Skilled in \emph{Parallel Computing theory}, skilled in \emph{OpenMP}, \emph{CUDA}, learning \emph{OpecStack}.\\
+Skilled in \emph{Linux operating system}.\\
+Skilled in \emph{Python}, \emph{C} and \emph{Fortran} Language.\\
+Familiar with \emph{data structure}, \emph{software design patterns} and \emph{coding specification}.
+\end{tabular}
+%Section
+\section{Scientific Research Innovations}
+\begin{tabular}{r|p{12cm}}
+ \textsc{Mar.2015-Present}&East China University of Science and Technology  \\
+ &\footnotesize{- 2 papers submitted to SCI core journals}\\\multicolumn{2}{c}{} \\
+ \textsc{Mar.2014-Feb.2015}&Shanghai Institute of Optics and Fine Mechanics(\emph{joint training}) \\
+ &\footnotesize{- Natural Science Foundation of China, No.1401331G00}\\
+ &\footnotesize{- Develop simulation platform for \emph{Laser-Molecule process}}\\
+ &\footnotesize{- Publish 2 papers on \emph{Optics Express} belonging to the \emph{Optical Society of America}}\\\multicolumn{2}{c}{} \\
+ \textsc{Sep.2011-Feb.2014}&East China University of Science and Technology \\
+ &\footnotesize{- Natural Science Foundation of China, No. 11074263, No. 60921004, and No. 61308029}\\
+ &\footnotesize{- Develop simulation platform for \emph{Laser-Atom process}}\\
+ &\footnotesize{- Publish 1 papers on \emph{Optics Express} belonging to the \emph{Optical Society of America}}\\\multicolumn{2}{c}{} \\
+\textsc{Sep.2006-Jun.2010}&Ocean University of China\\
+ &\footnotesize{- Improve method to measure node of lens group and write paper(\emph{the only academic}}\\
+ &\footnotesize{\hspace{3pt} \emph{paper of all department in undergraduate stage})}\\
+ &\footnotesize{- School Outstanding Thesis} 
+\end{tabular}
+%Section: Scholarships and additional info
+\section{Scholarships and Certificates}
+\begin{tabular}{p{15cm}}
+Two times of Scholarship for Best Learning, School Outstanding Student\\
+The Third Prize of School Graduate Paper Annual Meeting\\
+Excellent assistant for \emph{college physics course}\\
+National Computer Rank Examination Certificate of C Language, Grade 2\\
+Parallel Computing Technology Development Engineer Certificate
+\end{tabular}
+\section{Self-Identification}
+\begin{tabular}{p{17cm}}
+Strong ability to solve problems independently, with no lack of teamwork spirit.\\
+Hard working, willing to learn and progress, quick learner.\\
+A stable personality and high sense of responsibility.\\
+Being optimistic, ready to help others.\\
+Like mountain climbing, swimming, body building, playing badminton, running is my favorite.
+\end{tabular}
+\end{document}
